@@ -8,5 +8,5 @@ FROM jupyter/minimal-notebook:612aa5710bf9
 # If you do switch to root, always be sure to add a "USER $NB_USER" command at the end of the
 # file to ensure the image runs as a unprivileged user by default.
 RUN conda create -n cling
-SHELL ["conda", "run", "-n", "cling"]
+SHELL ["conda", "run", "-n", "cling", "/bin/bash", "-c"]
 RUN conda install xeus-cling -c conda-forge
