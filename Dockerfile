@@ -8,4 +8,6 @@ FROM jupyter/minimal-notebook:612aa5710bf9
 # If you do switch to root, always be sure to add a "USER $NB_USER" command at the end of the
 # file to ensure the image runs as a unprivileged user by default.
 RUN conda create -n cling
-SHELL ["conda", "run", "-n", "cling", "conda", "install", "xeus-cling", "-c", "conda-forge]
+RUN echo "source activate env" > ~/.bashrc
+ENV PATH /opt/conda/envs/env/bin:$PATH
+RUN conda install xeus-cling -c conda-forge
