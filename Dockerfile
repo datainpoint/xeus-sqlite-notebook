@@ -11,3 +11,5 @@ RUN conda create -n cling
 RUN echo "source activate env" > ~/.bashrc
 ENV PATH /opt/conda/envs/env/bin:$PATH
 RUN conda install xeus-cling -c conda-forge
+# Add nbgitpuller
+RUN pip install nbgitpuller
