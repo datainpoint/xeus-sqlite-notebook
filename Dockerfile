@@ -13,3 +13,5 @@ ENV PATH /opt/conda/envs/env/bin:$PATH
 RUN conda install xeus-cling -c conda-forge
 # Add nbgitpuller
 RUN pip install nbgitpuller
+# Add nbgitpuller
+RUN pip install nbgitpuller
