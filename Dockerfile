@@ -10,7 +10,7 @@ FROM jupyter/minimal-notebook:612aa5710bf9
 RUN conda create -n xeus-sqlite
 RUN echo "source activate env" > ~/.bashrc
 ENV PATH /opt/conda/envs/env/bin:$PATH
-RUN conda install xeus-sqlite=0.1.0 jupyterlab -c conda-forge
+RUN conda install xeus-sqlite=0.1.0 -c conda-forge
 # Add RISE to the mix as well so user can show live slideshows from their notebooks
 # More info at https://rise.readthedocs.io
 # Note: Installing RISE with --no-deps because all the neeeded deps are already present.
