@@ -7,10 +7,10 @@ FROM jupyter/minimal-notebook:612aa5710bf9
 
 # If you do switch to root, always be sure to add a "USER $NB_USER" command at the end of the
 # file to ensure the image runs as a unprivileged user by default.
-RUN conda create -n cling
+RUN conda create -n xeus-sqlite
 RUN echo "source activate env" > ~/.bashrc
 ENV PATH /opt/conda/envs/env/bin:$PATH
-RUN conda install xeus-cling -c conda-forge
+RUN conda install xeus-sqlite -c conda-forge
 # Add RISE to the mix as well so user can show live slideshows from their notebooks
 # More info at https://rise.readthedocs.io
 # Note: Installing RISE with --no-deps because all the neeeded deps are already present.
